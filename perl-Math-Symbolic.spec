@@ -8,13 +8,13 @@
 Summary:	Math::Symbolic - symbolic calculations
 Summary(pl):	Math::Symbolic - obliczenia symboliczne
 Name:		perl-Math-Symbolic
-Version:	0.131
+Version:	0.132
 Release:	1
 # same as perl
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	17726e4a7aef155a5ced0e6365b8524c
+# Source0-md5:	74a6b541abd383a48d842c33397c39b8
 %if %{with tests}
 BuildRequires:	perl(Data::Dumper)
 BuildRequires:	perl(Memoize) >= 1.01
