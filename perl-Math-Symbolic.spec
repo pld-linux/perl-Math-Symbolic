@@ -22,7 +22,7 @@ BuildRequires:	perl-Parse-RecDescent >= 1.94
 BuildRequires:	perl-Pod-Coverage >= 0.11
 BuildRequires:	perl(Test::More)
 %endif
-BuildRequires:	perl-devel >= 5.8.0
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
