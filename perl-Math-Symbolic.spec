@@ -1,25 +1,25 @@
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-#
+
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Math
 %define	pnam	Symbolic
 Summary:	Math::Symbolic - symbolic calculations
 Summary(pl):	Math::Symbolic - obliczenia symboliczne
 Name:		perl-Math-Symbolic
-Version:	0.125
+Version:	0.126
 Release:	1
 # same as perl
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	83b0bc6886e61b8e8bf52223712f9be8
+# Source0-md5:	f437ef804608cd6afb8bbc11b12e4491
 %if %{with tests}
 BuildRequires:	perl(Data::Dumper)
 BuildRequires:	perl(Memoize) >= 1.01
-BuildRequires:	perl-Parse-RecDescent
-BuildRequires:	perl-Pod-Coverage
+BuildRequires:	perl-Parse-RecDescent >= 1.94
+BuildRequires:	perl-Pod-Coverage >= 0.11
 BuildRequires:	perl(Test::More)
 %endif
 BuildRequires:	perl-devel >= 5.8.0
@@ -87,7 +87,6 @@ drzewa $term pomno¿onego przez 5 razy sinus omega razy t plus fi.
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
-
 %{__make}
 
 %{?with_tests:%{__make} test}
