@@ -76,7 +76,7 @@ Math::Symbolic jest u¿ywanie wbudowanego parsera do generowania drzew
 z wyra¿eñ takich jak '2 * x^5'. Mo¿na do tego u¿yæ metody klasy
 Math::Symbolic->parse_from_string().
 
-Oczywi¶cie mo¿na ³±czyæ interfejs przeci±¿anai z parserem przy
+Oczywi¶cie mo¿na ³±czyæ interfejs przeci±¿ania z parserem przy
 generowaniu drzew w kodzie perlowym - na przyk³ad
 "$term * 5 * 'sin(omega*t+fi)'" stworzy drzewo z istniej±cego
 drzewa $term pomno¿onego przez 5 razy sinus omega razy t plus fi.
