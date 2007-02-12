@@ -6,7 +6,7 @@
 %define		pdir	Math
 %define		pnam	Symbolic
 Summary:	Math::Symbolic - symbolic calculations
-Summary(pl):	Math::Symbolic - obliczenia symboliczne
+Summary(pl.UTF-8):   Math::Symbolic - obliczenia symboliczne
 Name:		perl-Math-Symbolic
 Version:	0.134
 Release:	1
@@ -54,32 +54,32 @@ generate trees with Perl code such as "$term * 5 * 'sin(omega*t+phi)'"
 which will create a tree of the existing tree $term times 5 times the
 sine of the vars omega times t plus phi.
 
-%description -l pl
-Pakiet Math::Symbolic oferuje programistom perlowym mo¿liwo¶æ obliczeñ
-symbolicznych bez u¿ywania zewnêtrznych (i komercyjnych) bibliotek
+%description -l pl.UTF-8
+Pakiet Math::Symbolic oferuje programistom perlowym moÅ¼liwoÅ›Ä‡ obliczeÅ„
+symbolicznych bez uÅ¼ywania zewnÄ™trznych (i komercyjnych) bibliotek
 i/lub aplikacji.
 
-Drzewa Math::Symbolic mo¿na tworzyæ na kilka sposobów. Nie ma
-w³a¶ciwych obiektów Math::Symbolic, zamiast nich u¿ywa siê podklas
-Math::Symbolic. Najbardziej ogólnym, ale niestety najmniej intuicyjnym
-sposobem tworzenia drzew jest u¿ycie konstruktorów klas
+Drzewa Math::Symbolic moÅ¼na tworzyÄ‡ na kilka sposobÃ³w. Nie ma
+wÅ‚aÅ›ciwych obiektÃ³w Math::Symbolic, zamiast nich uÅ¼ywa siÄ™ podklas
+Math::Symbolic. Najbardziej ogÃ³lnym, ale niestety najmniej intuicyjnym
+sposobem tworzenia drzew jest uÅ¼ycie konstruktorÃ³w klas
 Math::Symbolic::Operator, Math::Symbolic::Variable i
-Math::Symbolic::Constant do tworzenia (zagnie¿d¿onych) obiektów
-odpowiednich typów.
+Math::Symbolic::Constant do tworzenia (zagnieÅ¼dÅ¼onych) obiektÃ³w
+odpowiednich typÃ³w.
 
-Poza tym mo¿na u¿ywaæ interfejsu przeci±¿ania, aby u¿ywaæ
-standardowych operatorów (i funkcji) Perla na istniej±cych drzewach
-Math::Symbolic i standardowych wyra¿eniach perlowych.
+Poza tym moÅ¼na uÅ¼ywaÄ‡ interfejsu przeciÄ…Å¼ania, aby uÅ¼ywaÄ‡
+standardowych operatorÃ³w (i funkcji) Perla na istniejÄ…cych drzewach
+Math::Symbolic i standardowych wyraÅ¼eniach perlowych.
 
 Prawdopodobnie najwygodniejszym sposobem tworzenia drzew
-Math::Symbolic jest u¿ywanie wbudowanego parsera do generowania drzew
-z wyra¿eñ takich jak '2 * x^5'. Mo¿na do tego u¿yæ metody klasy
+Math::Symbolic jest uÅ¼ywanie wbudowanego parsera do generowania drzew
+z wyraÅ¼eÅ„ takich jak '2 * x^5'. MoÅ¼na do tego uÅ¼yÄ‡ metody klasy
 Math::Symbolic->parse_from_string().
 
-Oczywi¶cie mo¿na ³±czyæ interfejs przeci±¿ania z parserem przy
-generowaniu drzew w kodzie perlowym - na przyk³ad
-"$term * 5 * 'sin(omega*t+fi)'" stworzy drzewo z istniej±cego
-drzewa $term pomno¿onego przez 5 razy sinus omega razy t plus fi.
+OczywiÅ›cie moÅ¼na Å‚Ä…czyÄ‡ interfejs przeciÄ…Å¼ania z parserem przy
+generowaniu drzew w kodzie perlowym - na przykÅ‚ad
+"$term * 5 * 'sin(omega*t+fi)'" stworzy drzewo z istniejÄ…cego
+drzewa $term pomnoÅ¼onego przez 5 razy sinus omega razy t plus fi.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
