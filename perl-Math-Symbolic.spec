@@ -9,7 +9,7 @@ Summary:	Math::Symbolic - symbolic calculations
 Summary(pl.UTF-8):	Math::Symbolic - obliczenia symboliczne
 Name:		perl-Math-Symbolic
 Version:	0.134
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
