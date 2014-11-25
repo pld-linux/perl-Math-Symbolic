@@ -2,9 +2,9 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Math
 %define		pnam	Symbolic
+%include	/usr/lib/rpm/macros.perl
 Summary:	Math::Symbolic - symbolic calculations
 Summary(pl.UTF-8):	Math::Symbolic - obliczenia symboliczne
 Name:		perl-Math-Symbolic
@@ -15,15 +15,16 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	6272de6bfc780ec1476e08d209816dcf
+URL:		http://search.cpan.org/dist/Math-Symbolic/
+BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl(Data::Dumper)
 BuildRequires:	perl(Memoize) >= 1.01
+BuildRequires:	perl(Test::More)
 BuildRequires:	perl-Parse-RecDescent >= 1.94
 BuildRequires:	perl-Pod-Coverage >= 0.11
-BuildRequires:	perl(Test::More)
 %endif
-BuildRequires:	perl-devel >= 1:5.8.0
-BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -77,9 +78,9 @@ z wyrażeń takich jak '2 * x^5'. Można do tego użyć metody klasy
 Math::Symbolic->parse_from_string().
 
 Oczywiście można łączyć interfejs przeciążania z parserem przy
-generowaniu drzew w kodzie perlowym - na przykład
-"$term * 5 * 'sin(omega*t+fi)'" stworzy drzewo z istniejącego
-drzewa $term pomnożonego przez 5 razy sinus omega razy t plus fi.
+generowaniu drzew w kodzie perlowym - na przykład "$term * 5 *
+'sin(omega*t+fi)'" stworzy drzewo z istniejącego drzewa $term
+pomnożonego przez 5 razy sinus omega razy t plus fi.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -98,7 +99,7 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install examples/*.pl $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -p examples/*.pl $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
