@@ -4,7 +4,6 @@
 
 %define		pdir	Math
 %define		pnam	Symbolic
-%include	/usr/lib/rpm/macros.perl
 Summary:	Math::Symbolic - symbolic calculations
 Summary(pl.UTF-8):	Math::Symbolic - obliczenia symboliczne
 Name:		perl-Math-Symbolic
